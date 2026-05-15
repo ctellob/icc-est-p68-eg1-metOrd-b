@@ -8,7 +8,25 @@ public class App {
         // ordenar la lista de películas por título utilizando el método sortByTitle del
         // MovieController
         // imprimir la lista de películas ordenada
+        Movie[] movies = generateMoviesList();
 
+        System.out.println("---------------------------------------------");
+        System.out.println("Peliculas sin ordenar");
+        printMovies(movies);
+
+        MovieController controller = new MovieController();
+        controller.sortByTitle(movies);
+        System.out.println("---------------------------------------------");
+        System.out.println("Peliculas Ordenadas");
+        printMovies(movies);
+        System.out.println("---------------------------------------------");
+    }
+
+    public static void printMovies(Movie[] movies) {
+
+        for (Movie movie : movies) {
+            System.out.println(movie);
+        }
     }
 
     /**
@@ -45,6 +63,7 @@ public class App {
         movies[23] = new Movie("the avengers", 2013);
         movies[24] = new Movie("Iron Man", 2008);
         return movies;
+
     }
 
 }
