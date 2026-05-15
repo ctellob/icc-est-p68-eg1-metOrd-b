@@ -25,6 +25,7 @@ public class App {
     public static void printMovies(Movie[] movies) {
 
         for (Movie movie : movies) {
+
             System.out.println(movie);
         }
     }
